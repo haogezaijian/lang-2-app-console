@@ -188,6 +188,7 @@ onMounted(() => {
       <div class="quick-actions">
         <a-button
           type="default"
+          class="btn-blog"
           @click="
             setPrompt(
               '创建一个现代化的个人博客网站，包含文章列表、详情页、分类标签、搜索功能、评论系统和个人简介页面。采用简洁的设计风格，支持响应式布局，文章支持Markdown格式，首页展示最新文章和热门推荐。',
@@ -197,6 +198,7 @@ onMounted(() => {
         >
         <a-button
           type="default"
+          class="btn-company"
           @click="
             setPrompt(
               '设计一个专业的企业官网，包含公司介绍、产品服务展示、新闻资讯、联系我们等页面。采用商务风格的设计，包含轮播图、产品展示卡片、团队介绍、客户案例展示，支持多语言切换和在线客服功能。',
@@ -206,6 +208,7 @@ onMounted(() => {
         >
         <a-button
           type="default"
+          class="btn-shop"
           @click="
             setPrompt(
               '构建一个功能完整的在线商城，包含商品展示、购物车、用户注册登录、订单管理、支付结算等功能。设计现代化的商品卡片布局，支持商品搜索筛选、用户评价、优惠券系统和会员积分功能。',
@@ -215,12 +218,73 @@ onMounted(() => {
         >
         <a-button
           type="default"
+          class="btn-portfolio"
           @click="
             setPrompt(
               '制作一个精美的作品展示网站，适合设计师、摄影师、艺术家等创作者。包含作品画廊、项目详情页、个人简历、联系方式等模块。采用瀑布流或网格布局展示作品，支持图片放大预览和作品分类筛选。',
             )
           "
           >作品展示网站</a-button
+        >
+        <a-button
+          type="default"
+          class="btn-social"
+          @click="
+            setPrompt(
+              '开发一个现代化社交媒体平台，包含用户注册登录、个人主页、动态发布、评论互动、私信聊天、关注系统等功能。设计时尚的用户界面，支持图片视频分享，包含点赞收藏功能，提供个性化推荐和热门话题展示。',
+            )
+          "
+          >社交媒体平台</a-button
+        >
+        <a-button
+          type="default"
+          class="btn-education"
+          @click="
+            setPrompt(
+              '创建一个在线教育课程平台，包含课程列表、视频播放、章节管理、作业提交、学习进度跟踪、在线测验等功能。设计专注学习的界面风格，支持课程搜索筛选、教师主页、学习社区讨论，提供学习数据分析和证书颁发系统。',
+            )
+          "
+          >教育在线课程</a-button
+        >
+        <a-button
+          type="default"
+          class="btn-dashboard"
+          @click="
+            setPrompt(
+              '构建一个专业的数据可视化仪表盘，包含多种图表展示（折线图、柱状图、饼图、地图等）、实时数据更新、数据筛选分析、导出报告等功能。设计简洁专业的界面，支持多维度数据展示，提供数据钻取功能，支持自定义仪表盘布局。',
+            )
+          "
+          >数据可视化仪表盘</a-button
+        >
+        <a-button
+          type="default"
+          class="btn-healthcare"
+          @click="
+            setPrompt(
+              '开发一个医疗健康管理系统，包含患者档案管理、预约挂号、电子处方、医疗记录查询、在线问诊、健康数据跟踪等功能。设计专业可靠的界面风格，注重隐私保护，支持医生工作站和患者门户，提供提醒通知系统。',
+            )
+          "
+          >医疗健康管理系统</a-button
+        >
+        <a-button
+          type="default"
+          class="btn-travel"
+          @click="
+            setPrompt(
+              '创建一个旅行预订平台，包含目的地搜索、酒店预订、机票查询、行程规划、用户评价、优惠活动等功能。设计视觉吸引力强的界面，支持地图查看、实时价格比较、订单管理，提供旅行攻略和推荐系统，支持多设备同步。',
+            )
+          "
+          >旅行预订平台</a-button
+        >
+        <a-button
+          type="default"
+          class="btn-cms"
+          @click="
+            setPrompt(
+              '构建一个功能完善的内容管理系统(CMS)，包含文章编辑发布、媒体管理、用户权限控制、数据统计、SEO设置等功能。设计简洁高效的后台界面，支持富文本编辑、自定义页面模板，提供内容分类标签系统和版本控制功能。',
+            )
+          "
+          >内容管理系统</a-button
         >
       </div>
 
@@ -488,13 +552,11 @@ onMounted(() => {
   border-radius: 25px;
   padding: 8px 20px;
   height: auto;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  color: #475569;
   backdrop-filter: blur(15px);
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  font-weight: 500;
 }
 
 .quick-actions .ant-btn::before {
@@ -504,7 +566,7 @@ onMounted(() => {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s;
 }
 
@@ -513,11 +575,130 @@ onMounted(() => {
 }
 
 .quick-actions .ant-btn:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(59, 130, 246, 0.4);
-  color: #3b82f6;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮颜色差异化 */
+.btn-blog {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  color: #1e40af;
+}
+
+.btn-blog:hover {
+  background: #bfdbfe;
+  border-color: #60a5fa;
+  color: #1e3a8a;
+}
+
+.btn-company {
+  background: #bfdbfe;
+  border: 1px solid #60a5fa;
+  color: #1e3a8a;
+}
+
+.btn-company:hover {
+  background: #93c5fd;
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+
+.btn-shop {
+  background: #ddd6fe;
+  border: 1px solid #a78bfa;
+  color: #5b21b6;
+}
+
+.btn-shop:hover {
+  background: #c4b5fd;
+  border-color: #8b5cf6;
+  color: #4c1d95;
+}
+
+.btn-portfolio {
+  background: #d1fae5;
+  border: 1px solid #6ee7b7;
+  color: #065f46;
+}
+
+.btn-portfolio:hover {
+  background: #a7f3d0;
+  border-color: #34d399;
+  color: #065f46;
+}
+
+/* 新增按钮样式 */
+.btn-social {
+  background: #fed7aa;
+  border: 1px solid #fb923c;
+  color: #9a3412;
+}
+
+.btn-social:hover {
+  background: #fdba74;
+  border-color: #f97316;
+  color: #9a3412;
+}
+
+.btn-education {
+  background: #e0e7ff;
+  border: 1px solid #818cf8;
+  color: #4338ca;
+}
+
+.btn-education:hover {
+  background: #c7d2fe;
+  border-color: #6366f1;
+  color: #3730a3;
+}
+
+.btn-dashboard {
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+  color: #92400e;
+}
+
+.btn-dashboard:hover {
+  background: #fde68a;
+  border-color: #fbbf24;
+  color: #92400e;
+}
+
+.btn-healthcare {
+  background: #fecdd3;
+  border: 1px solid #f87171;
+  color: #991b1b;
+}
+
+.btn-healthcare:hover {
+  background: #fda4af;
+  border-color: #ef4444;
+  color: #991b1b;
+}
+
+.btn-travel {
+  background: #e0f2fe;
+  border: 1px solid #60a5fa;
+  color: #1e40af;
+}
+
+.btn-travel:hover {
+  background: #bae6fd;
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+
+.btn-cms {
+  background: #ede9fe;
+  border: 1px solid #a78bfa;
+  color: #5b21b6;
+}
+
+.btn-cms:hover {
+  background: #ddd6fe;
+  border-color: #8b5cf6;
+  color: #4c1d95;
 }
 
 /* 区域标题 */
