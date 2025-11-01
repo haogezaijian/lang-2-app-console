@@ -87,6 +87,16 @@ const originItems = [
     label: '对话管理',
     title: '对话管理',
   },
+  {
+    key: 'others',
+    label: h('a', { href: 'http://106.53.27.222:3000', target: '_blank' }, '数据看板'),
+    title: '数据看板',
+  },
+  {
+    key: 'github',
+    label: h('a', { href: 'https://github.com/haogezaijian', target: '_blank' }, 'Github'),
+    title: 'Github',
+  },
 ]
 
 // 过滤菜单项
