@@ -163,6 +163,7 @@ onMounted(() => {
       <div class="hero-section">
         <h1 class="hero-title">Lang2APP</h1>
         <p class="hero-description">一句话轻松创建网站应用</p>
+        <p class="tips">Vue 工程模式执行时间较长，请耐心等待</p>
       </div>
 
       <!-- 用户提示词输入框 -->
@@ -505,6 +506,14 @@ onMounted(() => {
   color: #64748b;
   position: relative;
   z-index: 2;
+}
+.tips {
+  margin-top: 30px;
+  color: #fe8301;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* 输入区域 */
